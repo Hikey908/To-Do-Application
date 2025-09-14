@@ -4,6 +4,7 @@ from todo import models
 from .models import TODOO
 from django.contrib.auth import authenticate, login as auth_login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 def signup(request):
     if request.method=='POST':
@@ -11,6 +12,11 @@ def signup(request):
         email=request.POST.get('email')
         pwd=request.POST.get('pwd')
         print(fnm,email,pwd)
+
+        if User.objects.filter(username=fnm).exists():
+            messages.error(request, "Username already taken. Please choose another.")
+            return redirect(signup) 
+
         my_user = User.objects.create_user(fnm,email,pwd)
         my_user.save()
         return redirect('/loginn')
