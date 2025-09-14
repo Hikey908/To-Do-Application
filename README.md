@@ -44,7 +44,7 @@ This app allows users to manage their daily tasks with authentication support an
 
 ## Screenshots
 <p align="center">
-  <img width="530" height="710" alt="image" src="https://github.com/user-attachments/assets/77a2d84c-8c41-4856-af5d-fb96a34174d1" />
+  <img width="430" height="610" alt="image" src="https://github.com/user-attachments/assets/77a2d84c-8c41-4856-af5d-fb96a34174d1" />
 </p>
 
 ---
